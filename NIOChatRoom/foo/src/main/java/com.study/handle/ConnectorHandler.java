@@ -13,7 +13,7 @@ import java.io.*;
 import java.nio.channels.SocketChannel;
 
 /**
- * 消息处理者
+ * 消息处理者，每个通道(客户端)对应一个消息处理者
  * @author cxd27419
  */
 public class ConnectorHandler extends Connector {

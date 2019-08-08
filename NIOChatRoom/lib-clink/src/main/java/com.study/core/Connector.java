@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * 连接器,负责通过channel读或者写数据
+ * 连接器,负责通过channel读或者写数据，每个通道(客户端)对应一个连接器
  *
  * @author cxd27419
  */

@@ -22,7 +22,7 @@ public class IdleTimeoutScheduleJob extends ScheduleJob {
         //下次调度任务的延迟时间
         long nextDelay = idleTimeoutMilliseconds - (System.currentTimeMillis() - lastActiveTime);
         if (nextDelay <= 0){
-            //已超时，发送超时事件
+            //已超时，设置下次超时事件发送时间，并立即发送超时事件
             schedule(idleTimeoutMilliseconds);
             try {
                 connector.fireIdleTimeoutEvent();
